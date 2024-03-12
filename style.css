@@ -1,0 +1,36 @@
+body{
+    /*
+    removes the margin from the sides 
+
+    */
+    margin: 0;
+    font-family: cursive;
+}
+
+h1{
+
+    text-align: center;
+
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+ /*
+    There is only text in the div within the html file that contains this text 
+    styling this essentially styles the text that is in the div 
+    
+
+*/
+.color-container{
+    background-color: orange;
+    width: 300px;
+    height: 150px;
+    color: white;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
