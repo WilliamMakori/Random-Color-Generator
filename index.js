@@ -9,8 +9,16 @@ for (let index = 0; index < 30; index++) {
 
 const colorContainerEls = document.querySelectorAll(".color-container");
 
+console.log(colorContainerEls);
+
 function generateColors(){
-    colorContainerEl
+    colorContainerEl.forEach((colorContainerEl)=>{
+        const newColorCode = randomColor();
+        colorContainerEl.style.getElementsByClassName.backgroundColor = "#" + newColorCode;
+        console.log(newColorCode); 
+    }
+
+    )
 }
 
 function randomColor(){
@@ -23,7 +31,7 @@ function randomColor(){
        console.log(randomNum);
        colorCode += chars.substring(randomNum, randomNum + 1);
        console.log(colorCode, randomNum);
-
-        
+       
     }
+    return colorCode;
 }
