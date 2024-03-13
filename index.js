@@ -7,9 +7,12 @@ for (let index = 0; index < 30; index++) {
     containerEl.appendChild(colorContainerEl);
 }
 
+const colorContainerEls = document.querySelectorAll(".color-container");
+
 function generateColors(){
     colorContainerEl
 }
+
 function randomColor(){
     const chars = "0123456789abcdef"
     const colorCodeLength = 6;
