@@ -12,24 +12,12 @@ for (let index = 0; index < 30; index++) {
 
 const colorContainerEls = document.querySelectorAll(".color-container");
 // Forgot to call the function in the main script
-generateColors();
+
 // It still doesn't change the color on the screen but the loop logs out 30 different color codes
 
-function generateColors(){
 
-    colorContainerEl.forEach((colorContainerEl)=>{
+// Call the function after it's declared dummy
 
-        const newColorCode = randomColor(); // where does this newColorCode get used?
-        console.log(newColorCode);
-        colorContainerEl.style.backgroundColor = "#" + newColorCode;
-        
-       // colorContainerEl.style.backgroundColor = "#" + newColorCode;
-        // console.log(newColorCode); don't log it out anymore
-
-    }
-
-    )
-}
 
 // What does this code do? 
 // The chars variable has the numbers that will be used to create the random colorcode, any permutation 
@@ -51,7 +39,8 @@ function randomColor(){
        // the colorcode length determines which element in the chars array gets appended to the string
 
        console.log(randomNum); // Not needed
-       // creation of the colorcode is done here. 
+       // creation of the colorcode is done here by appending different characters from the chars variable to the colorcode variable
+       
        colorCode += chars.substring(randomNum, randomNum + 1);
        // print out the colorcode and and the randomNum at each iteration of the loop
 
@@ -61,3 +50,23 @@ function randomColor(){
 
     return colorCode;
 }
+
+
+// The randomColor function is declared first 
+function generateColors(){
+
+    colorContainerEls.forEach((colorContainerEl)=>{
+
+        const newColorCode = randomColor(); // where does this newColorCode get used?
+        console.log(newColorCode);
+        colorContainerEl.style.backgroundColor = "#" + newColorCode;
+
+       // colorContainerEl.style.backgroundColor = "#" + newColorCode;
+        // console.log(newColorCode); don't log it out anymore
+
+    }
+
+    )
+}
+
+generateColors();
